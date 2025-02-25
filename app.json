@@ -36,6 +36,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "1d5d7290-dc42-4242-946e-917cd6fb7a97"
+      }
+    },
+    "owner": "grateful_melo"
   }
 }
