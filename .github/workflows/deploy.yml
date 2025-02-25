@@ -25,7 +25,10 @@ jobs:
         run: npm install -g eas-cli
 
       - name: Authenticate with Expo
-        run: echo "EXPO_TOKEN=${{ secrets.EXPO_TOKEN }}" >> $GITHUB_ENV
+        run: eas login --token ${{ secrets.EXPO_TOKEN }}
+
+      - name: Verify EAS Project Info
+        run: eas project:info
 
       - name: Publish Update to Expo
         run: eas update --branch main --auto --non-interactive
